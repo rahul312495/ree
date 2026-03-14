@@ -1,0 +1,89 @@
+.page { padding: 32px; }
+.header { margin-bottom: 24px; }
+.title { font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--slate-800); }
+.subtitle { color: var(--slate-500); font-size: 14px; margin-top: 4px; }
+
+.errorBar { background: var(--red-100); color: var(--red-600); border-radius: var(--radius-sm); padding: 10px 14px; font-size: 13px; margin-bottom: 16px; display: flex; justify-content: space-between; }
+.errorBar button { background: none; border: none; color: var(--red-600); font-size: 16px; }
+
+.layout { display: grid; grid-template-columns: 340px 1fr; gap: 20px; min-height: 500px; }
+
+.listPanel { display: flex; flex-direction: column; gap: 10px; }
+
+.searchInput { padding: 9px 14px; border: 1.5px solid var(--slate-200); border-radius: var(--radius-md); font-size: 14px; background: #fff; color: var(--slate-700); outline: none; transition: border-color 0.2s; width: 100%; }
+.searchInput:focus { border-color: var(--green-500); }
+
+.skItem { height: 68px; border-radius: var(--radius-md); margin-bottom: 4px; }
+
+.list { display: flex; flex-direction: column; gap: 6px; }
+
+.customerItem {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 14px;
+  background: #fff; border: 1.5px solid var(--slate-200); border-radius: var(--radius-md);
+  cursor: pointer; transition: all 0.15s; animation: fadeUp 0.3s ease;
+}
+.customerItem:hover { border-color: var(--green-300); background: var(--green-50); }
+.activeItem { border-color: var(--green-500); background: var(--green-50); box-shadow: 0 0 0 3px rgba(34,197,94,0.1); }
+
+.avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--green-600); color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+.custInfo { flex: 1; overflow: hidden; }
+.custName { font-size: 14px; font-weight: 600; color: var(--slate-800); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.custEmail { font-size: 12px; color: var(--slate-400); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.custStats { text-align: right; flex-shrink: 0; }
+.statVal { font-family: var(--font-mono); font-size: 16px; font-weight: 700; color: var(--green-600); }
+.statLbl { font-size: 10px; color: var(--slate-400); text-transform: uppercase; }
+
+.empty { text-align: center; padding: 40px; color: var(--slate-400); font-size: 14px; }
+
+/* Detail panel */
+.detailPanel { background: #fff; border: 1px solid var(--slate-200); border-radius: var(--radius-lg); padding: 28px; overflow-y: auto; }
+
+.noSelection { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 300px; gap: 12px; color: var(--slate-400); }
+.noSelIcon { font-size: 48px; }
+.noSelection p { font-size: 15px; }
+
+.detailLoading { display: flex; align-items: center; justify-content: center; height: 300px; }
+.spinner { width: 32px; height: 32px; border: 3px solid var(--green-200); border-top-color: var(--green-600); border-radius: 50%; animation: spin 0.7s linear infinite; }
+
+.detail { animation: fadeIn 0.3s ease; display: flex; flex-direction: column; gap: 24px; }
+
+.detailHeader { display: flex; align-items: center; gap: 16px; }
+.detailAvatar { width: 56px; height: 56px; border-radius: 50%; background: var(--green-600); color: #fff; font-weight: 800; font-size: 22px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.detailName { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--slate-800); }
+.detailEmail { font-size: 13px; color: var(--slate-500); }
+.delBtn { margin-left: auto; background: none; border: none; font-size: 18px; padding: 6px 10px; border-radius: var(--radius-sm); transition: background 0.15s; }
+.delBtn:hover { background: var(--red-100); }
+
+.detailStats { display: flex; gap: 0; background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: var(--radius-md); overflow: hidden; }
+.dStat { flex: 1; padding: 16px 20px; text-align: center; border-right: 1px solid var(--slate-200); }
+.dStat:last-child { border-right: none; }
+.dStatVal { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--green-600); }
+.dStatLbl { font-size: 11px; color: var(--slate-400); text-transform: uppercase; margin-top: 2px; letter-spacing: 0.06em; }
+
+.detailFields { display: flex; flex-direction: column; gap: 10px; }
+.detailField { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--slate-600); background: var(--slate-50); padding: 10px 14px; border-radius: var(--radius-sm); }
+.fieldIcon { font-size: 16px; }
+
+.orderHistTitle { font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--slate-700); margin-bottom: 12px; }
+.orderList { display: flex; flex-direction: column; gap: 8px; }
+.orderItem { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border: 1px solid var(--slate-100); border-radius: var(--radius-sm); }
+.orderItem > div:first-child { flex: 1; }
+.orderNum { font-family: var(--font-mono); font-size: 12px; font-weight: 600; color: var(--green-700); }
+.orderDate { font-size: 11px; color: var(--slate-400); margin-top: 2px; }
+.orderStatus { padding: 3px 10px; border-radius: 20px; font-size: 11.5px; font-weight: 600; }
+.orderTotal { font-family: var(--font-mono); font-weight: 700; color: var(--green-600); font-size: 14px; }
+
+/* Confirm modal */
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.35); z-index: 100; display: flex; align-items: center; justify-content: center; padding: 20px; animation: fadeIn 0.2s; backdrop-filter: blur(4px); }
+.confirmModal { background: #fff; border-radius: var(--radius-lg); width: 100%; max-width: 340px; padding: 32px; text-align: center; box-shadow: var(--shadow-lg); }
+.confirmModal h3 { font-family: var(--font-display); font-size: 20px; margin-bottom: 8px; }
+.confirmModal p { color: var(--slate-500); font-size: 14px; }
+.cancelBtn { flex: 1; padding: 10px 20px; background: var(--slate-100); border: none; border-radius: var(--radius-sm); font-size: 14px; font-weight: 600; color: var(--slate-600); }
+.delConfirmBtn { flex: 1; padding: 10px 20px; background: var(--red-500); border: none; border-radius: var(--radius-sm); font-size: 14px; font-weight: 600; color: #fff; }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+}

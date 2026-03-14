@@ -1,0 +1,92 @@
+.page { padding: 28px; max-width: 780px; }
+
+.header { margin-bottom: 24px; }
+.title { font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--slate-800); }
+.subtitle { color: var(--slate-500); font-size: 14px; margin-top: 4px; }
+
+.loadingArea { display: flex; flex-direction: column; gap: 14px; }
+.skCard { height: 120px; border-radius: var(--radius-lg); }
+
+.empty { display: flex; flex-direction: column; align-items: center; padding: 80px 20px; gap: 12px; text-align: center; }
+.emptyIcon { font-size: 56px; }
+.empty h2 { font-family: var(--font-display); font-size: 22px; color: var(--slate-700); }
+.empty p { color: var(--slate-400); font-size: 15px; }
+
+.orderList { display: flex; flex-direction: column; gap: 16px; }
+
+.orderCard {
+  background: #fff; border: 1.5px solid var(--slate-200); border-radius: var(--radius-xl);
+  overflow: hidden; animation: fadeUp 0.35s ease;
+  transition: box-shadow 0.2s;
+}
+.orderCard:hover { box-shadow: var(--shadow-md); }
+
+.cardHeader {
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+  padding: 18px 22px; cursor: pointer; gap: 12px;
+  border-bottom: 1px solid var(--slate-100);
+  transition: background 0.15s;
+}
+.cardHeader:hover { background: var(--slate-50); }
+
+.cardLeft { display: flex; align-items: center; gap: 14px; }
+.orderNum { font-family: var(--font-mono); font-size: 14px; font-weight: 700; color: var(--green-700); }
+.orderDate { font-size: 13px; color: var(--slate-400); }
+
+.cardRight { display: flex; align-items: center; gap: 12px; }
+.orderTotal { font-family: var(--font-mono); font-size: 16px; font-weight: 800; color: var(--slate-800); }
+.statusBadge { padding: 4px 12px; border-radius: 20px; font-size: 12.5px; font-weight: 600; display: flex; align-items: center; gap: 5px; }
+.expandIcon { font-size: 11px; color: var(--slate-400); }
+
+/* Progress tracker */
+.progress {
+  display: flex; align-items: flex-start; justify-content: center;
+  padding: 20px 24px 16px; gap: 0;
+  background: var(--green-50);
+}
+
+.progressStep {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  flex: 1; position: relative;
+}
+
+.stepDot {
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--slate-200); color: var(--slate-400);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; z-index: 1;
+  transition: all 0.3s;
+}
+.stepDone { background: var(--green-600); color: #fff; }
+.stepActive { background: var(--green-500); color: #fff; box-shadow: 0 0 0 4px rgba(34,197,94,0.2); }
+
+.stepLabel { font-size: 10.5px; font-weight: 600; color: var(--slate-400); text-align: center; line-height: 1.2; }
+.stepLabelDone { color: var(--green-700); }
+
+.stepLine {
+  position: absolute; top: 15px; left: 50%; right: -50%;
+  height: 2px; background: var(--slate-200); z-index: 0;
+}
+.stepLineDone { background: var(--green-500); }
+
+.cancelledBanner {
+  padding: 12px 22px; background: var(--red-100); color: var(--red-600);
+  font-size: 13.5px; font-weight: 600;
+}
+
+/* Expanded items */
+.itemsSection { padding: 18px 22px; display: flex; flex-direction: column; gap: 14px; border-top: 1px solid var(--slate-100); }
+.itemsSectionTitle { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--slate-400); }
+
+.itemsList { display: flex; flex-direction: column; gap: 8px; }
+.item { display: flex; align-items: center; gap: 12px; font-size: 14px; padding: 8px 12px; background: var(--slate-50); border-radius: var(--radius-sm); }
+.itemEmoji { font-size: 20px; flex-shrink: 0; }
+.itemName { flex: 1; color: var(--slate-700); font-weight: 500; }
+.itemQty { color: var(--slate-400); font-size: 13px; }
+.itemPrice { font-family: var(--font-mono); font-weight: 700; color: var(--green-600); }
+
+.deliveryAddr { font-size: 13px; color: var(--slate-500); padding: 8px 12px; background: var(--slate-50); border-radius: var(--radius-sm); }
+
+.totalRow { display: flex; justify-content: space-between; align-items: center; padding-top: 8px; border-top: 1px solid var(--slate-100); }
+.totalRow span:first-child { font-size: 14px; font-weight: 600; color: var(--slate-600); }
+.totalVal { font-family: var(--font-mono); font-size: 20px; font-weight: 800; color: var(--green-700); }

@@ -1,0 +1,74 @@
+.page { padding: 32px; display: flex; flex-direction: column; gap: 24px; }
+
+.loading { display: flex; align-items: center; justify-content: center; height: 400px; }
+.spinner { width: 36px; height: 36px; border: 3px solid var(--green-200); border-top-color: var(--green-600); border-radius: 50%; animation: spin 0.7s linear infinite; }
+
+.header { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+.title { font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--slate-800); }
+.subtitle { color: var(--slate-500); font-size: 14px; margin-top: 4px; }
+
+.dateTag {
+  font-size: 12.5px;
+  color: var(--slate-500);
+  background: #fff;
+  border: 1px solid var(--slate-200);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-family: var(--font-mono);
+  margin-top: 6px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+.statCard {
+  background: #fff;
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: fadeUp 0.4s ease;
+}
+
+.statCard:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+.statIcon {
+  font-size: 28px;
+  width: 48px; height: 48px;
+  background: var(--card-bg);
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 4px;
+}
+
+.statValue {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--card-color);
+  line-height: 1;
+}
+
+.statLabel { font-size: 12.5px; color: var(--slate-500); font-weight: 500; }
+
+.chartsRow { display: flex; gap: 20px; flex-wrap: wrap; }
+
+.chartCard {
+  background: #fff;
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  flex: 1;
+  min-width: 280px;
+  animation: fadeUp 0.5s ease;
+}
+
+.chartHeader { margin-bottom: 16px; }
+.chartHeader h3 { font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--slate-700); }
